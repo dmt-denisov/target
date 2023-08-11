@@ -19,7 +19,11 @@
     "dialect": "postgres"
   },
   "production": {
-    "use_env_variable": "postgres://test:zFmu8GyoWHn7Zz3pPgL5yZ7opLMkjg4W@dpg-cjb2dprbq8nc73b34up0-a/test_8xpj",
+    "username": "test",
+    "password": "zFmu8GyoWHn7Zz3pPgL5yZ7opLMkjg4W",
+    "database": "test_8xpj",
+    "host": "dpg-cjb2dprbq8nc73b34up0-a",
+    "dialect": "postgres",
     "dialectOptions": {
       "ssl": {
         "rejectUnauthorized": false
