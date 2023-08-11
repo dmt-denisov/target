@@ -1,0 +1,20 @@
+{
+  "development": {
+    "use_env_variable": "DATABASE_URL"
+  },
+  "test": {
+    "username": "test",
+    "password": "zFmu8GyoWHn7Zz3pPgL5yZ7opLMkjg4W",
+    "database": "test_8xpj",
+    "host": "dpg-cjb2dprbq8nc73b34up0-a.frankfurt-postgres.render.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "postgres://test:zFmu8GyoWHn7Zz3pPgL5yZ7opLMkjg4W@dpg-cjb2dprbq8nc73b34up0-a/test_8xpj",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
