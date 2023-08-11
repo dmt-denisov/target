@@ -29,7 +29,7 @@
     "main": "app.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "star": "node app.js",
+      "start": "node app.js",
       "dev": "nodemon index.js --ext,json,jsx",
       "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
     },
