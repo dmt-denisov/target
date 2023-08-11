@@ -1,6 +1,15 @@
 {
   "development": {
-    "use_env_variable": "DATABASE_URL"
+    "username": "test",
+    "password": "zFmu8GyoWHn7Zz3pPgL5yZ7opLMkjg4W",
+    "database": "test_8xpj",
+    "host": "dpg-cjb2dprbq8nc73b34up0-a.frankfurt-postgres.render.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
     "username": "test",

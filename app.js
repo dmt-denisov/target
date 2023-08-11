@@ -1,13 +1,15 @@
 const express = require('express');
-const { Count } = require('./db/models');
+const db = require('./db/models/');
+
 
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 app.locals = 0
 
+
 app.get('/', async (req, res) => {
-    const count = await Count.findOne();
+    const a = await db.Count.findOne({ where: { id: 1 } })
     res.write(`
     <div style='display:flex;align-items:center;justify-content:center;height:85vh;flex-direction:column'>
     <a href='/away' target="_blank">
@@ -21,16 +23,15 @@ app.get('/', async (req, res) => {
 </defs>
 </svg>
 </a>
-<span style="font-size:32px;margin-top:40px">${count.firstName ? count.firstName : '777'}</span>
+<span style="font-size:32px;margin-top:40px">${a.firstName}</span>
     </div>
     `);
     res.end()
 })
 
 app.get('/away', async (req, res) => {
-    await Count.update({
-        firstName: firstName+1
-    })
+    let a = await db.Count.findOne({ where: { id: 1 }, raw:true })
+    await db.Count.update({ firstName: a.firstName + 1 }, { where: { id: 1 } })
     res.redirect('https://sandbox-lk.programmatic.ru')
 })
 
