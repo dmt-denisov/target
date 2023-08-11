@@ -9,7 +9,7 @@ app.locals = 0
 
 
 app.get('/', async (req, res) => {
-    const a = await db.Count.findOne({ where: { id: 1 } })
+    const b = await db.Count.findOne({ where: { id: 1 } })
     res.write(`
     <div style='display:flex;align-items:center;justify-content:center;height:85vh;flex-direction:column'>
     <a href='/away' target="_blank">
@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
 </defs>
 </svg>
 </a>
-<span style="font-size:32px;margin-top:40px">${a.firstName}</span>
+<span style="font-size:32px;margin-top:40px">${b.firstName}</span>
     </div>
     `);
     res.end()
