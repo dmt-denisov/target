@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
 </defs>
 </svg>
 </a>
-<span style="font-size:32px;margin-top:40px">${count.firstName}</span>
+<span style="font-size:32px;margin-top:40px">${count.firstName ? count.firstName : '777'}</span>
     </div>
     `);
     res.end()
