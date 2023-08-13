@@ -32,7 +32,7 @@ app.get('/', async (req, res) => {
 app.get('/away', async (req, res) => {
     let a = await db.Count.findOne({ where: { id: 1 }, raw:true })
     await db.Count.update({ firstName: a.firstName + 1 }, { where: { id: 1 } })
-    res.redirect('https://sandbox-lk.programmatic.ru/?utm_source=test&utm_medium=cpc&utm_campaign=test')
+    res.redirect('http://localhost:3000/counters/?utm_source=test&utm_medium=cpc&utm_campaign=test')
 })
 
 app.listen(PORT, () => {
