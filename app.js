@@ -55,7 +55,7 @@ app.get('/away', async (req, res) => {
 app.get('/away1', async (req, res) => {
     let a = await db.Count.findOne({ where: { id: 2 }, raw:true })
     await db.Count.update({ firstName: a.firstName + 1 }, { where: { id: 2 } })
-    res.redirect('https://sandbox-lk.programmatic.ru/sign-in/?utm_source=test&utm_medium=cpc&utm_campaign=test')
+    res.redirect('http://localhost:3000/?utm_source=test&utm_medium=cpc&utm_campaign=test')
 })
 
 app.listen(PORT, () => {
