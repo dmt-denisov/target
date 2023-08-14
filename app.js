@@ -6,8 +6,8 @@ const db = require('./db/models/');
 const app = express();
 const PORT = process.env.PORT || 4000;
 app.locals = 0
-const x = db.Count.create({firstName:0});
-x.save();
+const x = db.Count.create({firstName:0}).then((data) => data.save())
+
 
 app.get('/', async (req, res) => {
     const b = await db.Count.findOne({ where: { id: 1 } });
